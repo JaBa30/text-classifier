@@ -11,7 +11,7 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-path = "data/messages.csv"
+path = "data/spam.csv"
 logger.info("Loading dataset")
 data = load_data(path)
 logger.info(f"Loaded {len(data)} rows")

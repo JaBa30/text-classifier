@@ -24,17 +24,20 @@
 
 ## Metrics
 
+The model achieved 96% accuracy and a macro F1-score of 0.91. It performs very well on ham messages, but spam recall is 0.72, meaning that 36 out of 128 spam messages were incorrectly classified as ham. The model is therefore conservative when predicting spam: its spam precision is 0.99, but it misses a noticeable portion of actual spam.
+
+2026-09-06 16:55:39,080 | INFO | __main__ | Evaluating model
               precision    recall  f1-score   support
 
-         ham       1.00      1.00      1.00        44
-        spam       1.00      1.00      1.00        27
+         ham       0.96      1.00      0.98       904
+        spam       0.99      0.72      0.83       128
 
-    accuracy                           1.00        71
-   macro avg       1.00      1.00      1.00        71
-weighted avg       1.00      1.00      1.00        71
+    accuracy                           0.96      1032
+   macro avg       0.98      0.86      0.91      1032
+weighted avg       0.97      0.96      0.96      1032
 
-[[44  0]
- [ 0 27]]
+[[903   1]
+ [ 36  92]]
 
 ## Project structure
 
